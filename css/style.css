@@ -14,8 +14,8 @@
     --jelly: #D95E58;
     --pink: #FC7984;
     --title-color: #FFF;
-    --body-color: #1E1E1E;
-    --extra-black: #12121680;
+    --body-color: #141517;
+    --extra-black: #121216;
     --light-gray: hsl(0, 0%, 80%);
     --yellow: #FFC90A;
     --text-color: #666;
@@ -317,7 +317,7 @@ body{
     color: hsla(4, 31%, 21%, .4);
     font-size: var(--big-font-size);
     -webkit-background-clip: text;
-    background-image: radial-gradient(closest-side, #FF453A 100%, transparent 0);
+    background-image: radial-gradient(closest-side, #D95E58 100%, transparent 0);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 400px 400px;
@@ -352,8 +352,8 @@ body{
     /*========== ABOUT ============*/
 
 .about{
-    border-top: 7px solid var(--extra-black);
-    border-bottom: 7px solid var(--extra-black);
+    border-top: 6px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .about .section_subtitle{
@@ -386,7 +386,7 @@ body{
 
 
 .prize{
-    border-bottom: 7px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .prize_title{
@@ -417,13 +417,14 @@ body{
 }
 .prize_item{
     display: flex;
-    column-gap: 1rem;
+    column-gap: 1.5rem;
     align-items: flex-start;
 }
 
 .prize-icon{
-    font-size: 65px;
-    margin-top: -10px;
+    width: 3rem;
+    overflow: hidden;
+    margin-top: 5px;
 }
 
 .prize_meta{
@@ -456,7 +457,7 @@ body{
 /*========== ATTENDANCE ============*/
 
 .attendance{
-    border-bottom: 7px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 .attendance_container{
    row-gap: 3rem;
@@ -483,7 +484,7 @@ body{
 
 
 .vc_roud{
-    border-bottom: 7px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .round_container{
@@ -587,7 +588,7 @@ body{
 /*========== Testimonials ============*/
 
 .testimonials{
-    border-bottom: 7px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .testimonial_container {
@@ -672,7 +673,7 @@ body{
 /*========== AWARDS ============*/
 
 .awards{
-    border-bottom: 7px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 
 }
 .awards_container{
