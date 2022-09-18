@@ -686,7 +686,10 @@ body{
     margin-block-end: 25px;
 }
 .wrapper{
-    margin-left: -20px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
 }
 .wrapper i{
     font-size: 8rem;
