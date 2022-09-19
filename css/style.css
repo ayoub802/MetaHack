@@ -345,8 +345,8 @@ body{
     /*========== ABOUT ============*/
 
 .about{
-    border-top: 6px solid var(--extra-black);
-    border-bottom: 6px solid var(--extra-black);
+    border-top: 13px solid var(--extra-black);
+    border-bottom: 13px solid var(--extra-black);
 }
 
 .about .section_subtitle{
@@ -379,7 +379,7 @@ body{
 
 
 .prize{
-    border-bottom: 6px solid var(--extra-black);
+    border-bottom: 13px solid var(--extra-black);
 }
 
 .prize_title{
@@ -450,7 +450,7 @@ body{
 /*========== ATTENDANCE ============*/
 
 .attendance{
-    border-bottom: 6px solid var(--extra-black);
+    border-bottom: 13px solid var(--extra-black);
 }
 .attendance_container{
    row-gap: 3rem;
@@ -477,7 +477,7 @@ body{
 
 
 .vc_roud{
-    border-bottom: 6px solid var(--extra-black);
+    border-bottom: 13px solid var(--extra-black);
 }
 
 .round_container{
@@ -581,7 +581,7 @@ body{
 /*========== Testimonials ============*/
 
 .testimonials{
-    border-bottom: 6px solid var(--extra-black);
+    border-bottom: 13px solid var(--extra-black);
 }
 
 .testimonial_container {
@@ -666,7 +666,7 @@ body{
 /*========== AWARDS ============*/
 
 .awards{
-    border-bottom: 6px solid var(--extra-black);
+    border-bottom: 13px solid var(--extra-black);
 
 }
 .awards_container{
