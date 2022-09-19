@@ -51,7 +51,7 @@ window.addEventListener('scroll', scrollHeader)
       loop: false,
   
       autoplay: {
-        delay: 10000,
+        delay: 8000,
       },
   
     };
