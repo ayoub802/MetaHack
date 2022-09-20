@@ -41,80 +41,146 @@ window.addEventListener('scroll', scrollHeader)
 
 
 
- 
-  jQuery(document).ready(function ($) {
-    let autoPlayDelay = 8000;
-  
-    let options = {
-      init: true,
-      // Optional parameters
-      loop: false,
-  
-      autoplay: {
-        delay: 8000,
+ $(document).ready(function () {
+  var swiper = new Swiper(".agenda_container ", {
+    autoplay: {
+      delay: 7700,
+      disableOnInteraction: false
+    },
+    speed: 1000,
+    navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev"
+    },
+    on: {
+      init: function () {
+        $(".swiper-progress-bar").removeClass("animate");
+        $(".swiper-progress-bar").removeClass("active");
+        $(".swiper-progress-bar").eq(0).addClass("animate");
+        $(".swiper-progress-bar").eq(0).addClass("active");
       },
-  
-    };
-  
-
-    
-    let mySwiper = new Swiper(".agenda_container", options);
-    let slidersCount = mySwiper.params.loop
-      ? mySwiper.slides.length - 10
-      : mySwiper.slides.length;
-    let widthParts = 100 / slidersCount;
-  
-    // $(".swiper-counter .total").html(slidersCount);
-    // for (let i = 0; i < slidersCount; i++) {
-    // 	$(".swiper-progress-bar .progress-sections").append("<span></span>");
-    // }
-  
-    function initProgressBar() {
-      let calcProgress =
-        (slidersCount - 1) * (autoPlayDelay + mySwiper.params.speed);
-      calcProgress += autoPlayDelay;
-      $(".swiper-progress-bar .progress").animate(
-        {
-          width: "100%"
-        },
-        calcProgress,
-        "linear"
-      );
+      slideChangeTransitionStart: function () {
+        $(".swiper-progress-bar").removeClass("animate");
+        $(".swiper-progress-bar").removeClass("active");
+        $(".swiper-progress-bar").eq(0).addClass("active");
+      },
+      slideChangeTransitionEnd: function () {
+        $(".swiper-progress-bar").eq(0).addClass("animate");
+      }
     }
-  
-    initProgressBar();
-  
-    mySwiper.on("slideChange", function () {
-      let progress = $(".swiper-progress-bar .progress");
-  
-      $(".swiper-counter .current").html(this.activeIndex + 1);
-  
-      if (
-        (this.progress == -0 || (this.progress == 1 && this.params.loop)) &&
-        !progress.parent().is(".stopped")
-      ) {
-        progress.css("width", "0");
-        if (this.activeIndex == 0) {
-          initProgressBar();
-        }
-      }
-  
-      if (progress.parent().is(".stopped")) {
-        progress.animate(
-          {
-            width: Math.round(widthParts * (this.activeIndex + 1)) + "%"
-          },
-          this.params.speed,
-          "linear"
-        );
-      }
-    });
-  
-    mySwiper.on("touchMove", function () {
-      $(".swiper-progress-bar .progress").stop().parent().addClass("stopped");
-    });
   });
-  
+});
+
+
+
+
+
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 700
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
 
   /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
