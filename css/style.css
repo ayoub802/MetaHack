@@ -10,7 +10,6 @@
      */
 
     --first-color: #FF453A;
-    --scarlet: #FF1D30;
     --jelly: #D95E58;
     --pink: #FC7984;
     --title-color: #FFF;
@@ -107,6 +106,9 @@ i{
 }
 html{
     scroll-behavior: smooth;
+    /* height: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden; */
 }
 
 body{
@@ -123,6 +125,7 @@ body{
 
 ::-webkit-scrollbar-thumb { background-color: var(--body-color); }
 
+  
 /*========= REUSED ==========*/
 
 .container{
@@ -302,8 +305,14 @@ body{
   .home{
     padding-block-start: calc(var(--section-padding) + 2.5rem);
     margin-block-end: 60px;
+    position: relative;
   }
-
+  #particles-js {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
   .home_container{
     row-gap: 2rem;
   }
@@ -345,8 +354,8 @@ body{
     /*========== ABOUT ============*/
 
 .about{
-    border-top: 13px solid var(--extra-black);
-    border-bottom: 13px solid var(--extra-black);
+    border-top: 6px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .about .section_subtitle{
@@ -379,7 +388,7 @@ body{
 
 
 .prize{
-    border-bottom: 13px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .prize_title{
@@ -450,7 +459,7 @@ body{
 /*========== ATTENDANCE ============*/
 
 .attendance{
-    border-bottom: 13px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 .attendance_container{
    row-gap: 3rem;
@@ -477,7 +486,7 @@ body{
 
 
 .vc_roud{
-    border-bottom: 13px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .round_container{
@@ -581,7 +590,7 @@ body{
 /*========== Testimonials ============*/
 
 .testimonials{
-    border-bottom: 13px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 }
 
 .testimonial_container {
@@ -666,7 +675,7 @@ body{
 /*========== AWARDS ============*/
 
 .awards{
-    border-bottom: 13px solid var(--extra-black);
+    border-bottom: 6px solid var(--extra-black);
 
 }
 .awards_container{
@@ -679,10 +688,7 @@ body{
     margin-block-end: 25px;
 }
 .wrapper{
-    width: 250px;
-    display: flex;
-    align-items: center;
-    column-gap: .5rem;
+    margin-left: -20px;
 }
 .wrapper i{
     font-size: 8rem;
@@ -704,6 +710,17 @@ body{
 .agenda{
     position: relative;
   }
+
+  .agenda_wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5rem;
+  }
+
+  .agenda_wrapper .section_subtitle{
+    margin-top: 1rem;
+  }
+
   .agenda_container{
     display: grid;
     row-gap: 2.5rem;
@@ -724,6 +741,44 @@ body{
     padding: 0;
   }
   
+  .swiper-progress-bar {
+    position: relative;
+    top: 9rem;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: 1.5px;
+  }
+  .swiper-progress-bar .slide_progress-bar {
+    position: absolute;
+    height: 1.5px;
+    background: var(--extra-black);
+    width: auto;
+    clear: both;
+    opacity: 0;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+  }
+  .swiper-progress-bar .slide_progress-bar:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--jelly);
+    height: 100%;
+    width: 0;
+    content: "";
+    transition: 0.1s width linear;
+  }
+  .swiper-progress-bar.active .slide_progress-bar {
+    opacity: 1;
+  }
+  .swiper-progress-bar.animate .slide_progress-bar:after {
+    transition: width linear;
+    transition-delay: unset;
+    width: 100%;
+    transition-duration: 23s;
+  }
   /* .agenda_item::after{
     content: "";
     position: absolute;
@@ -759,50 +814,6 @@ body{
     font-weight: var(--f-w-300);
   }
   
-  .agenda .container .swiper-progress-bar{
-    max-width: unset;
-    padding: initial;
-  }
-  .swiper-progress-bar {
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 2rem;
-    left: -20px;
-    margin: 20px auto;
-    background: var(--text-color);
-  }
-  .swiper-progress-bar .progress {
-    height: inherit;
-    left: 0;
-    top: 0;
-    position: absolute;
-    background: var(--jelly);
-    z-index: 1;
-  }
-  .swiper-progress-bar .progress-sections {
-    left: 0;
-    top: 0;
-    position: absolute;
-    height: inherit;
-    width: inherit;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-  }
-  .swiper-progress-bar .progress-sections span {
-    flex: 1;
-    height: inherit;
-    border-right: 2px solid #eee;
-  }
-  .swiper-progress-bar .progress-sections span:last-child {
-    border-right-width: 0;
-  }
-  
-  .swiper-counter {
-    width: 600px;
-    margin: 0 auto;
-  }
 
   /*========== FOOTER ============*/
 
@@ -923,6 +934,9 @@ body{
         padding-block-start: calc(var(--section-padding) + 5rem);
     }
 
+    .swiper-progress-bar{
+        top: 8.7rem;
+    }
     .about_container,
     .attendance_container,
     .awards_container,
@@ -1047,7 +1061,7 @@ body{
     }
 
     .swiper-progress-bar{
-        top: 5rem;
+        top: 11.7rem;
     }
 
     .award_title{
@@ -1069,7 +1083,7 @@ body{
     }
 
     .home{
-        padding-block-start: calc(var(--section-padding) + 8rem);
+        padding-block-start: 12rem;
     }
 
     .home_content{
