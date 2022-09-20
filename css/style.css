@@ -688,15 +688,10 @@ body{
     margin-block-end: 25px;
 }
 .wrapper{
-    margin-left: -20px;
+   display: flex;
+    align-items: center;
+    gap: 13px;
 }
-.wrapper i{
-    font-size: 8rem;
-}
-.wrapper i:not(:first-child){
-    margin-left: -50px;
-}
-
 
 .award_title{
     font-size: var(--h1-font-size);
