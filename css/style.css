@@ -688,9 +688,9 @@ body{
     margin-block-end: 25px;
 }
 .wrapper{
-   display: flex;
+     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 15px;
 }
 
 .award_title{
