@@ -939,6 +939,7 @@ body{
   .footer_card .logo{
     font-size: var(--h1-font-size);
     font-weight: var(--f-w-500);
+    color: var(--title-color);
     margin-block-end: 10px;
   }
 
