@@ -185,7 +185,7 @@ particlesJS("particles-js", {
   /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
   distance: '60px',
-  duration: 3800,
+  duration: 2800,
   // reset: true,
 })
 
