@@ -508,6 +508,7 @@ body{
         padding: 10px 15px;
         font-size: 12px;
         font-weight: var(--f-w-500);
+        color: var(--body-color);
         border: none;
     } 
 
@@ -532,7 +533,7 @@ body{
     }
     
     .attendance_content .section_subtitle{
-       color: var(--jelly);
+       color: var(--text-color);
        font-weight: var(--f-w-300);
     }
     .attendance_wrapper{
@@ -689,7 +690,7 @@ body{
     
     .testi_subtitle{
         font-size: var(--normal-font-size);
-        color: var(--jelly);
+        color: var(--text-color);
         font-weight: var(--f-w-300);
         text-transform: uppercase;
     }
@@ -848,7 +849,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--jelly);
+    background: var(--second-color);
     height: 100%;
     width: 0;
     content: "";
@@ -886,7 +887,7 @@ body{
   } */
   .agend_title{
     font-weight: var(--f-w-300);
-    color: var(--jelly);
+    color: var(--title-color);
     font-size: var(--normal-font-size);
     margin-block-end: 10px;
   }
