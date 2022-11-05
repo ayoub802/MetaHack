@@ -485,7 +485,6 @@ body{
     
     .weighted_card .card_text{
         align-items: center;
-        margin-block-start: 15px;
         font-weight: var(--f-w-300);
         font-size: var(--normal-font-size);
         color: var(--text-color);
