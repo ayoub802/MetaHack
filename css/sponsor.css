@@ -180,7 +180,7 @@ body{
 /*========== HEADER ============*/
 
 .header{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     transition: var(--transition-1);
@@ -189,10 +189,6 @@ body{
     padding-block: 15px;
 }
 
-.header.scroll-header{
-    background-color: var(--title-color);
-    box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
-}
 .header.scroll-header .nav{
     color: var(--body-color);
 }
