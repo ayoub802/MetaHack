@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaHack</title>
+ 
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+   
+    <div class="body_image">
+    </div>
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Metahack</a>
+            
+            <div class="nav_menu">
+                
+                <ul class="nav_list">
+                    <li>
+                        <a href="index.html" class="nav_link">About</a>
+                    </li>
+                    <li>
+                        <a href="roadmap.html" class="nav_link">Roadmap</a>
+                    </li>
+                    <li>
+                        <a href="sponsors.html" class="nav_link">Sponsors</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="nav_link active">Contact</a>
+                    </li>
+                </ul>
+
+                <a href="register.html" class="nav_register">Register</a>
+            </div>
+
+            <div class="nav_toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+        </nav>
+    </header>
+    
+    <main>
+    
+        <section class="section contact">
+            <div class="container">
+                <form action="" class="contact_form">
+                    <h3 class="contact_title">Get In Touch</h3>
+                                       
+                   <input type="text" required placeholder="Name" class="name contact_field">    
+                   <input type="email" required placeholder="Email" class="email contact_field">
+                   <textarea name="" required id="" placeholder="Message" cols="30" rows="10" class="message contact_field"></textarea>
+                   
+                   <button type="submit" class="send_btn contact_button_submit">send</button>
+                </form>
+            </div>
+        </section>
+   
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+     <script type="text/javascript">
+         (function() {
+             emailjs.init('acYR2JGqTvfp4lasL');
+            })();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
