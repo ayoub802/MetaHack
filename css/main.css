@@ -463,6 +463,47 @@ body{
     padding-inline:0 4rem;
     font-weight: var(--f-w-300);
   }
+
+/*========= CONTACT ===========*/
+   .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin-inline: auto;
+    transform: translateY(20%);
+   }
+
+
+   .contact_title{
+    font-size: 1.95rem;
+    margin-block-end: 25px;
+    font-weight: var(--f-w-500);
+   }
+
+   .contact_field{
+    padding: 15px 15px;
+    color: #D1D1D6;
+    border: 1px solid var(--text-color);
+    margin-block-end: 10px;
+    background-color: transparent;
+   }
+   
+   textarea.contact_field{
+     resize: none;
+     outline: none;
+     width: 100%;
+   }
+   .contact_button_submit{
+    border: 1px solid var(--second-color);
+    color: var(--second-color);
+    background-color: transparent;
+    padding: 18px;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+   }
+
  /*========== FOOTER ============*/
     
  .footer{
